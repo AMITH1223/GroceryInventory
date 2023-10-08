@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for subject_item in items %}
+    <tr>
+      <td>{{ subject_item.name }}</td>
+      <td>{{ subject_item.quantity }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</html>

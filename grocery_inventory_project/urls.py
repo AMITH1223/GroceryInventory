@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Inventory.views import add_grocery_item, get_inventory
+from Inventory.views import add_grocery_item, get_inventory,display
 
 urlpatterns = [
+    path('Grid/', display),
     path('admin/', admin.site.urls),
     path('add_item/', add_grocery_item, name='add_grocery_item'),
     path('get_inventory/', get_inventory, name='get_inventory'),
